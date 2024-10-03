@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-asset>
+            <img src="textures/brick/basecolor.jpg" id="base">
+            <img src="textures/brick/NormalMap.jpg" id="normal">
+        </a-asset>
+        <a-box
+            src="#base"
+            repeat="2 2"
+            normal-map="#normal"
+            normal-texture-repeat="2 2"
+            position="0 1 -5"
+        ></a-box>
+        <a-sphere
+            src="#base"
+            repeat="2 2"
+            normal-map="#normal"
+            normal-texture-repeat="2 2"
+            position="3 1 -5"
+        ></a-sphere>
+    </a-scene>
+</body>
+</html>
