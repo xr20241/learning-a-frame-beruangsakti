@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- This is the wall  -->
+         <!-- This is the back wall -->
+        <a-box 
+            color="gray"
+            width="10"
+            height="5"
+            depth="0.5"
+            position="0 2.5 -7"
+        ></a-box>
+        <!-- This is the left Wall -->
+        <a-box 
+            color="#4d4d4d"
+            width="0.5"
+            height="5"
+            depth="10"
+            position="-5 2.5 -5"
+        ></a-box>
+        <!-- This is the right Wall -->
+        <!-- <a-box 
+            color="gray"
+            width="0.5"
+            height="5"
+            depth="10"
+            position="5 2.5 -5"
+        ></a-box> -->
+        <!-- This is the floor -->
+        <a-box 
+            color="#4d4d4d"
+            width="10"
+            height="0.5"
+            depth="10"
+            position="0 0 -5"
+        ></a-box>
+
+        <!-- This is the 3 object  -->
+        <a-box 
+            id="box1"
+            color="red"
+            position="-2 3 -5"
+            rotation="30 0 0"
+        ></a-box>
+        <a-box 
+            id="box2"
+            color="green"
+            position="0 2 -5"
+        ></a-box>
+        <a-box 
+            id="box3"
+            width="0.5"
+            height="1"
+            color="blue"
+            position="2 1 -5"
+            rotation = "0 0 30"
+        ></a-box>
+
+        <!-- The light  -->
+        <a-light 
+            type="ambient"
+            intensity ="0.3"
+        ></a-light>
+        <!-- <a-light 
+            type="point"
+            intensity ="0.5"
+            position="3 3 1"
+        ></a-light> -->
+        <!-- <a-light 
+            type="directional"
+            intensity ="1.0"
+            position="3 2 3"
+            angle="15"
+        ></a-light> -->
+        <a-light
+            type="spot"
+            intensity="0.6"
+            position="0 3 3"
+            angle="35"
+            penumbra="0.4"
+            target="#box3"
+        ></a-light>
+
+        
+    </a-scene>
+    
+    
+</body>
+</html>
